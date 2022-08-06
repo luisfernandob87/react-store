@@ -12,13 +12,12 @@ const Purchases = () => {
         dispatch(getPurchasesThunk())
     },[])
 
-
     return (
         <ul>
             <h1>Purchases</h1>
             {
                 purchases.map(purchase => (
-                    <li>
+                    <li key={purchase.id}>
                         <p>{purchase.createdAt}</p>
                     </li>
                 ))

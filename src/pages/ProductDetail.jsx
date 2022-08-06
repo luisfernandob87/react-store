@@ -26,17 +26,21 @@ const ProductDetail = () => {
         const filteredProducts = allProducts.filter((productItem) => productItem.category.id == productsFind.category.id)
         setSuggestedProducts(filteredProducts);
     },[allProducts, id])
+    
+    // console.log(productDetail);
 
     return (
-        <div>
+        <div className='details'>
             <h1>{productDetail?.title}</h1>
             <img src={productDetail?.productImgs} alt="Imagen_Producto" />
             <p>{productDetail?.price}</p>
-            <ul>
+            <p>{productDetail.description}</p>
+                <h3>Suggestions</h3>
+            <ul className='suggested' >
             {
                 suggestedProducts.map(product => (
-                    <li onClick={() => navigate(`/products/${product.id}`)}>
-                        <h3>{product.title}</h3>
+                    <li key={product.title} onClick={() => navigate(`/products/${product.id}`)}>
+                        <h5>{product.title}</h5>
                         <img src={product.productImgs} alt="" />
                     </li>
                 ))

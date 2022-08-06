@@ -29,3 +29,29 @@ img{
 .status{
   color: #ff0000;
 }
+.details{
+  background-color: white;
+  text-align: center;
+}
+.details ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.details li{
+  max-width: 250px;
+}
+.details img{
+  max-width: 300px;
+  max-height: 100%;
+}
+.suggested img{
+  max-width: 100px; 
+  max-height: 50%;
+}
+.suggested li{
+  list-style: none;
+}
+.suggested h5{
+  font-size: small;
+}
