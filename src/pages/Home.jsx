@@ -54,7 +54,7 @@ const Home = () => {
       {products.map((product) => (
           <Col key={product.id}>
             <Card  onClick={() => navigate(`/products/${product.id}`)}>
-              <Card.Img variant="top" src={product.productImgs} />
+              <Card.Img variant="top" src={product.productImgs[0]} />
               <Card.Body >
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text className="special">Precio especial: {product.price}</Card.Text>
