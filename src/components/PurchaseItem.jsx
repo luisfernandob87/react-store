@@ -7,7 +7,7 @@ const PurchaseItem = ({ purchase }) => {
         <ul>
             {
                 purchase.cart.products.map(productItem => (
-                    <li>
+                    <li key={productItem.id}>
                         <p>{productItem.price}</p>
                     </li>
                 ))
