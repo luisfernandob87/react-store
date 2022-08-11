@@ -1,11 +1,9 @@
 body{
-  background-color: #f0f0f0!important
+  background-color: #f0f0f0!important;
 }
-
 img{
   margin-left: 20px;
   max-width: 100px;
-  /* max-height: 100px; */
   max-height: 100%;
 }
 .col .card{
@@ -49,9 +47,15 @@ img{
   max-width: 100px; 
   max-height: 50%;
 }
-.suggested li{
+li{
   list-style: none;
 }
 .suggested h5{
   font-size: small;
+}
+.row{
+  width: 100%;
+}
+.navbar{
+  width: 100%;
 }

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { InputGroup, Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { getProductsThunk } from "../store/slices/products.slice";
+import { addProductThunk } from "../store/slices/cart.slice";
+import {  getProductsThunk } from "../store/slices/products.slice";
 
 const ProductDetail = () => {
   const allProducts = useSelector((state) => state.products);
@@ -38,7 +39,7 @@ const ProductDetail = () => {
         id: productDetail.id,
         quantity
     }
-    console.log(cart);
+    dispatch(addProductThunk(cart))
   }
 
   return (

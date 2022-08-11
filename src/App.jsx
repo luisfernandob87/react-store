@@ -9,7 +9,6 @@ function App() {
   const isLoading = useSelector(state => state.isLoading)
 
   return (
-    <div>
     <HashRouter>
         <NavBar/>
         {isLoading && <LoadingScreen/>}
@@ -22,7 +21,6 @@ function App() {
         <Route path='/products/:id' element={<ProductDetail/>} />
       </Routes>
     </HashRouter>
-    </div>
   )
 }
 

@@ -18,11 +18,11 @@ const Purchases = () => {
             <h1>Purchases</h1>
             {
                 purchases.map(purchase => (
-                    <div key={purchase.id}>
+                    <li key={purchase.id}>
                     <p>{purchase.id}</p>
                     <p>{purchase.createdAt}</p>
                     <PurchaseItem purchase={purchase}/>
-                    </div>
+                    </li>
                 ))
             }
            
