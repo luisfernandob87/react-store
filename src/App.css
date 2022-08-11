@@ -15,6 +15,7 @@ img{
   align-items: center;
   min-width: 200px;
   height: 300px;
+  
 }
 .special{
   color: #ff0000;
@@ -74,4 +75,13 @@ li{
   background-color: #ff0000;
   border-radius: 10px;
   margin-top: 10px;
+}
+
+.purchases{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid gray;
 }

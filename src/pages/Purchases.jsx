@@ -1,33 +1,50 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPurchasesThunk } from '../store/slices/purchases.slice';
-import PurchaseItem from '../components/PurchaseItem';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getPurchasesThunk } from "../store/slices/purchases.slice";
+import PurchaseItem from "../components/PurchaseItem";
 
 const Purchases = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const purchases = useSelector(state => state.purchases)
+  const purchases = useSelector((state) => state.purchases);
 
-    useEffect(()=>{
-        dispatch(getPurchasesThunk())
+  useEffect(() => {
+    dispatch(getPurchasesThunk());
+  }, [dispatch]);
 
-    },[dispatch])
+  const getTotal = (products) => {
+    let total = 0
+    products.forEach(product => {
+        total += Number(product.price) 
+    });
+        return total
+  };
 
-    return (
-        <ul>
-            <h1>Purchases</h1>
-            {
-                purchases.map(purchase => (
-                    <li key={purchase.id}>
-                    <p>{purchase.id}</p>
-                    <p>{purchase.createdAt}</p>
-                    <PurchaseItem purchase={purchase}/>
-                    </li>
-                ))
-            }
-           
-        </ul>
-    );
+  const getDate = (date) =>{
+    
+    date = new Date(date)
+
+    let result = date.toLocaleString();
+    
+    return result
+  }
+
+  return (
+    <>
+      <h4 style={{ textAlign: "center" }}>Purchases</h4>
+      <section>
+        {purchases.map((purchase) => (
+          <div className="purchases" key={purchase.id}>
+            <p>Order # {purchase.id}</p>
+            <p>Date: {getDate(purchase.createdAt)}</p>
+            {/* <PurchaseItem purchase={purchase} /> */}
+            <p>Total: {getTotal(purchase.cart.products)}</p>
+            <p>Status: {purchase.cart.status}</p>
+          </div>
+        ))}
+      </section>
+    </>
+  );
 };
 
 export default Purchases;
