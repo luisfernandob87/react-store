@@ -28,21 +28,20 @@ const Login = () => {
 
     return (
         <div>
-            <h1>Login</h1>
-            <Form onSubmit={handleSubmit(submit)}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form onSubmit={handleSubmit(submit)} style={{textAlign:'center', paddingTop:'20px'}}>
+                <Form.Group style={{maxWidth:'500px'}} className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" {...register("email")} />
+                    <Form.Control  type="email" placeholder="Enter email" {...register("email")} />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group style={{maxWidth:'500px'}} className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" {...register("password")} />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button style={{background: '#ff0000', border:'none', color:'white', padding:'10px', borderRadius:'10px', marginBottom:'20px'}} variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
