@@ -15,22 +15,21 @@ const Cart = ({ show, handleClose }) => {
     dispatch(getCartThunk());
   }, []);
 
-  // console.log(products);
-
   return (
     <Offcanvas show={show} onHide={handleClose} scroll={true} placement="end">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>Cart</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        <Button onClick={() => dispatch(buyCartThunk())}>Buy Cart</Button>
+        <button style={{background: '#ff0000', border:'none', color:'white', padding:'10px', borderRadius:'10px', marginBottom:'20px'}} onClick={() => dispatch(buyCartThunk())}>Buy Cart</button>
         {products.map((product) => (
           <div
             key={product.id}
             onClick={() => navigate(`/products/${product.id}`)}
           >
-            <p>{product.title}</p>
-            <p>{product.productsInCart?.quantity}</p>
+            <p><strong>{product.title}</strong></p>
+            <p>Quantity: {product.productsInCart?.quantity} Price: ${product.price} <strong>Total:</strong> ${(product.productsInCart?.quantity)*(product.price)}</p>
+            <hr />
           </div>
         ))}
       </Offcanvas.Body>

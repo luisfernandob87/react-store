@@ -43,23 +43,23 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="details">
+    <section className="details">
       <h1>{productDetail?.title}</h1>
       <img src={productDetail?.productImgs} alt="Imagen_Producto" />
       <p>{productDetail?.price}</p>
       <p>{productDetail?.description}</p>
       <h5>Add to Cart</h5>
       <InputGroup className="mb-3">
-        <Form.Control
-          placeholder="Cantidad"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-          value={quantity}
-          onChange={e => setQuantity(e.target.value)}
-        />
-        <Button variant="outline-secondary" id="button-addon2" onClick={addCart}>
-          Add
-        </Button>
+        <select value={quantity} onChange={e => setQuantity(e.target.value)}>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button className="btn"  onClick={addCart}>
+          Add to Cart
+        </button>
       </InputGroup>
 
       <h3>Suggestions</h3>
@@ -70,11 +70,13 @@ const ProductDetail = () => {
             onClick={() => navigate(`/products/${product.id}`)}
           >
             <h5>{product.title}</h5>
-            <img src={product.productImgs} alt="" />
+            <img src={product.productImgs} alt="Product_img" />
+            <p className="special">Special Price: {product.price}</p>
+            <p>Normal Price: {product.price * 1.25}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

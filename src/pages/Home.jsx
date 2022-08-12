@@ -81,15 +81,15 @@ const Home = () => {
                   <Card.Body>
                     <Card.Title>{product.title}</Card.Title>
                     <Card.Text className="special">
-                      Precio especial: {product.price}
+                      Special Price: {product.price}
                     </Card.Text>
                     <Card.Text className="regular">
-                      Precio normal: {product.price * 1.25}
+                      Normal Price: {product.price * 1.25}
                     </Card.Text>
                     <Card.Text className="status">
                       {product.status == "active"
-                        ? "Disponible"
-                        : "No Disponible"}
+                        ? "Available"
+                        : "Not Available"}
                     </Card.Text>
                   </Card.Body>
                 </Card>
