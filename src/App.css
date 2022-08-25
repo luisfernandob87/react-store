@@ -1,17 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
-  background-color: #f0f0f0!important;
+body {
+  background-color: #f0f0f0 !important;
 }
-img{
+img {
   margin-left: 20px;
   max-width: 100px;
   max-height: 100%;
 }
-.col .card{
-  background-color:white;
+.col .card {
+  background-color: white;
   border: none;
   border-radius: 10px;
   display: flex;
@@ -20,69 +20,69 @@ img{
   min-width: 200px;
   height: 300px;
 }
-.special{
+.special {
   color: #ff0000;
   font-size: large;
-  font-weight:1000;
+  font-weight: 1000;
 }
-.regular{
+.regular {
   font-size: small;
 }
-.status{
+.status {
   color: #ff0000;
 }
-.details{
+.details {
   background-color: white;
   text-align: center;
 }
-.details h1{
+.details h1 {
   padding-top: 20px;
 }
-.details ul{
+.details ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.details li{
+.details li {
   max-width: 250px;
 }
-.details img{
+.details img {
   max-width: 300px;
   max-height: 300px;
 }
-.suggested img{
+.suggested img {
   /* max-width: 100px;  */
   max-height: 100px;
 }
-li{
+li {
   list-style: none;
 }
-.suggested h5{
+.suggested h5 {
   font-size: small;
 }
-.row{
+.row {
   width: 100%;
 }
-#root{
-  max-width:100%;
+#root {
+  max-width: 100%;
 }
-.mb-3{
+.mb-3 {
   margin: 0 auto;
   max-width: fit-content;
 }
-.mb-3 .form-control{
+.mb-3 .form-control {
   margin-top: 10px;
   border-radius: 10px;
   background-color: white;
   margin-right: 10px;
 }
-.mb-3 .btn{
+.mb-3 .btn {
   color: white;
   background-color: #ff0000;
   border-radius: 10px;
   margin-top: 10px;
 }
-.purchases{
+.purchases {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -90,23 +90,26 @@ li{
   background-color: white;
   border-bottom: 1px solid gray;
 }
-.card-body{
-  text-align:center;
+.card-body {
+  text-align: center;
 }
-.card-body .card-title{
+.card-body .card-title {
   font-size: small;
 }
-select{
+select {
   width: 50px;
   text-align: center;
   height: 50px;
   border: none;
   background-color: white;
 }
-div .mb-3{
+div .mb-3 {
   align-items: center;
 }
-p strong{
+p strong {
   font-weight: bold;
   color: black;
+}
+.testing {
+  text-align: center;
 }
